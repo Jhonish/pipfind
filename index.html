@@ -33,15 +33,9 @@
       text-decoration: none;
     }
 
-    button,
-    input {
-      font: inherit;
-    }
-
-    /* Navigation */
+    /* NAVIGATION */
 
     nav {
-      width: 100%;
       border-bottom: 1px solid #222;
     }
 
@@ -49,13 +43,14 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 22px 24px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
@@ -73,9 +68,9 @@
     }
 
     .nav-button {
+      color: #fff !important;
       border: 1px solid #fff;
       padding: 9px 16px;
-      color: #fff !important;
     }
 
     .nav-button:hover {
@@ -83,33 +78,36 @@
       color: #000 !important;
     }
 
-    /* Hero */
+    /* HERO */
 
     .hero {
       max-width: 900px;
       margin: 0 auto;
-      padding: 130px 24px 120px;
+      padding: 140px 24px 130px;
       text-align: center;
     }
 
     .hero h1 {
-      max-width: 750px;
+      max-width: 800px;
       margin: 0 auto;
-      font-size: clamp(48px, 8vw, 88px);
+
+      font-size: clamp(50px, 8vw, 90px);
       line-height: 0.95;
-      letter-spacing: -4px;
+      letter-spacing: -5px;
       font-weight: 700;
     }
 
     .hero p {
       max-width: 560px;
-      margin: 28px auto 0;
-      color: #999;
+      margin: 30px auto 0;
+
+      color: #888;
       font-size: 18px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       margin-top: 40px;
+
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -118,12 +116,14 @@
 
     .button {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 14px 25px;
+
       border: 1px solid #fff;
       background: #fff;
       color: #000;
+
+      font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
     }
 
     .button:hover {
@@ -141,7 +141,7 @@
       color: #000;
     }
 
-    /* How it works */
+    /* SECTIONS */
 
     .section {
       max-width: 1100px;
@@ -149,87 +149,111 @@
       padding: 90px 24px;
     }
 
-    .section-border {
+    .border-top {
       border-top: 1px solid #222;
     }
 
-    .section-heading {
-      margin-bottom: 50px;
-    }
-
-    .section-heading span {
+    .section-label {
       color: #666;
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
 
-    .section-heading h2 {
+    .section-title {
       margin-top: 10px;
-      font-size: 38px;
+
+      font-size: 40px;
+      line-height: 1.1;
       letter-spacing: -1.5px;
     }
 
+    /* STEPS */
+
     .steps {
+      margin-top: 50px;
+
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
       border-top: 1px solid #222;
       border-left: 1px solid #222;
     }
 
     .step {
-      min-height: 220px;
+      min-height: 230px;
       padding: 28px;
+
       border-right: 1px solid #222;
       border-bottom: 1px solid #222;
     }
 
     .step-number {
       color: #555;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .step h3 {
-      margin-top: 50px;
-      font-size: 21px;
+      margin-top: 55px;
+      font-size: 20px;
     }
 
     .step p {
       margin-top: 10px;
-      color: #888;
-      font-size: 15px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* PLUMBER SECTION */
+
+    .plumber-content {
+      margin-top: 25px;
+      max-width: 560px;
+    }
+
+    .plumber-content p {
+      color: #777;
+      font-size: 17px;
+    }
+
+    .plumber-button {
+      margin-top: 30px;
     }
 
     /* CTA */
 
     .cta {
-      text-align: center;
       border-top: 1px solid #222;
       border-bottom: 1px solid #222;
-      padding: 100px 24px;
+
+      padding: 110px 24px;
+
+      text-align: center;
     }
 
     .cta h2 {
-      font-size: clamp(34px, 5vw, 54px);
-      letter-spacing: -2px;
+      font-size: clamp(38px, 6vw, 60px);
+      letter-spacing: -3px;
     }
 
     .cta p {
-      margin: 15px auto 30px;
       max-width: 500px;
-      color: #888;
+      margin: 15px auto 30px;
+
+      color: #777;
     }
 
-    /* Footer */
+    /* FOOTER */
 
     footer {
       max-width: 1100px;
       margin: 0 auto;
       padding: 30px 24px;
+
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      color: #666;
+
+      color: #555;
       font-size: 13px;
     }
 
@@ -237,27 +261,28 @@
       color: #fff;
     }
 
-    /* Mobile */
+    /* MOBILE */
 
     @media (max-width: 700px) {
+
       .nav-inner {
         padding: 18px 20px;
       }
 
       .nav-links {
-        gap: 14px;
+        gap: 12px;
       }
 
-      .nav-links a:not(.nav-button) {
+      .nav-links .nav-text {
         display: none;
       }
 
       .hero {
-        padding: 90px 20px 90px;
+        padding: 95px 20px 90px;
       }
 
       .hero h1 {
-        letter-spacing: -2.5px;
+        letter-spacing: -3px;
       }
 
       .hero p {
@@ -268,17 +293,24 @@
         padding: 70px 20px;
       }
 
+      .section-title {
+        font-size: 34px;
+      }
+
       .steps {
         grid-template-columns: 1fr;
       }
 
       .step {
         min-height: auto;
-        padding: 25px;
       }
 
       .step h3 {
         margin-top: 35px;
+      }
+
+      .cta {
+        padding: 80px 20px;
       }
 
       footer {
@@ -290,82 +322,136 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
 
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo">PipeFind</a>
+
+      <a href="index.html" class="logo">
+        PipeFind
+      </a>
 
       <div class="nav-links">
-        <a href="#how-it-works">How it works</a>
-        <a href="#for-plumbers">For plumbers</a>
-        <a href="#" class="nav-button">Sign in</a>
+
+        <a href="#how-it-works" class="nav-text">
+          How it works
+        </a>
+
+        <a href="#for-plumbers" class="nav-text">
+          For plumbers
+        </a>
+
+        <!-- THIS NOW ACTUALLY GOES TO SIGNUP -->
+        <a href="signup.html" class="nav-button">
+          Sign up
+        </a>
+
       </div>
+
     </div>
   </nav>
 
 
-  <!-- Hero -->
+  <!-- HERO -->
 
   <main>
 
     <section class="hero">
-      <h1>Find a local plumber.</h1>
+
+      <h1>
+        Find a local plumber.
+      </h1>
 
       <p>
         Tell us what you need and connect with plumbers
         who can help with your job.
       </p>
 
-      <div class="hero-actions">
-        <a href="#" class="button">Get a quote</a>
-        <a href="#for-plumbers" class="button secondary">I'm a plumber</a>
+      <div class="hero-buttons">
+
+        <!-- THIS GOES TO SIGNUP -->
+        <a href="signup.html" class="button">
+          Get a quote
+        </a>
+
+        <!-- THIS GOES TO SIGNUP -->
+        <a href="signup.html" class="button secondary">
+          I'm a plumber
+        </a>
+
       </div>
+
     </section>
 
 
-    <!-- How it works -->
+    <!-- HOW IT WORKS -->
 
-    <section class="section section-border" id="how-it-works">
+    <section
+      class="section border-top"
+      id="how-it-works"
+    >
 
-      <div class="section-heading">
-        <span>How it works</span>
-        <h2>Simple from start to finish.</h2>
-      </div>
+      <span class="section-label">
+        How it works
+      </span>
+
+      <h2 class="section-title">
+        Simple from start to finish.
+      </h2>
 
       <div class="steps">
 
         <div class="step">
-          <div class="step-number">01</div>
 
-          <h3>Tell us what you need</h3>
+          <div class="step-number">
+            01
+          </div>
+
+          <h3>
+            Tell us what you need
+          </h3>
 
           <p>
-            Describe your plumbing problem and
-            tell us where you're located.
+            Describe your plumbing problem
+            and tell us where you're located.
           </p>
+
         </div>
 
-        <div class="step">
-          <div class="step-number">02</div>
 
-          <h3>Plumbers see your request</h3>
+        <div class="step">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <h3>
+            Plumbers see your request
+          </h3>
 
           <p>
             Local plumbers can view relevant
             jobs and express their interest.
           </p>
+
         </div>
 
-        <div class="step">
-          <div class="step-number">03</div>
 
-          <h3>Get connected</h3>
+        <div class="step">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <h3>
+            Get connected
+          </h3>
 
           <p>
             Connect with a plumber who is
             interested in helping with your job.
           </p>
+
         </div>
 
       </div>
@@ -373,22 +459,40 @@
     </section>
 
 
-    <!-- For plumbers -->
+    <!-- FOR PLUMBERS -->
 
-    <section class="section" id="for-plumbers">
+    <section
+      class="section"
+      id="for-plumbers"
+    >
 
-      <div class="section-heading">
-        <span>For plumbers</span>
-        <h2>Looking for more jobs?</h2>
-      </div>
+      <span class="section-label">
+        For plumbers
+      </span>
 
-      <p style="max-width: 550px; color: #888; font-size: 17px;">
-        Create a plumber profile, tell us the areas
-        you cover and discover local plumbing requests.
-      </p>
+      <h2 class="section-title">
+        Looking for more jobs?
+      </h2>
 
-      <div style="margin-top: 30px;">
-        <a href="#" class="button secondary">Join as a plumber</a>
+      <div class="plumber-content">
+
+        <p>
+          Create a plumber profile, tell us the
+          areas you cover and discover local
+          plumbing requests.
+        </p>
+
+        <div class="plumber-button">
+
+          <a
+            href="signup.html"
+            class="button secondary"
+          >
+            Join as a plumber
+          </a>
+
+        </div>
+
       </div>
 
     </section>
@@ -398,30 +502,41 @@
 
     <section class="cta">
 
-      <h2>Need a plumber?</h2>
+      <h2>
+        Need a plumber?
+      </h2>
 
       <p>
-        Submit your job and start connecting with
-        local plumbers.
+        Submit your job and start connecting
+        with local plumbers.
       </p>
 
-      <a href="#" class="button">Get a quote</a>
+      <a
+        href="signup.html"
+        class="button"
+      >
+        Get a quote
+      </a>
 
     </section>
 
   </main>
 
 
-  <!-- Footer -->
+  <!-- FOOTER -->
 
   <footer>
-    <div>© 2026 PipeFind</div>
 
-    <div>
+    <span>
+      © 2026 PipeFind
+    </span>
+
+    <span>
       <a href="#">Privacy</a>
       &nbsp;&nbsp;
       <a href="#">Terms</a>
-    </div>
+    </span>
+
   </footer>
 
 </body>
