@@ -403,43 +403,36 @@
   </footer>
 
 
-  <script>
-    const form = document.getElementById("signupForm");
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+<script>
+  const form = document.getElementById("signupForm");
 
-      const password =
-        document.getElementById("password").value;
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      const confirmPassword =
-        document.getElementById("confirmPassword").value;
+    const password =
+      document.getElementById("password").value;
 
-      if (password !== confirmPassword) {
-        alert("Passwords do not match.");
-        return;
-      }
+    const confirmPassword =
+      document.getElementById("confirmPassword").value;
 
-      const accountType =
-        document.querySelector(
-          'input[name="accountType"]:checked'
-        ).value;
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
 
-      /*
-        Supabase authentication will be connected here.
+    const accountType =
+      document.querySelector(
+        'input[name="accountType"]:checked'
+      ).value;
 
-        accountType will be either:
-        "customer"
-        or
-        "plumber"
-      */
+    // Save the selected account type temporarily
+    localStorage.setItem("pipefind_account_type", accountType);
 
-      alert(
-        "Signup is ready to connect to Supabase.\n\n" +
-        "Account type: " + accountType
-      );
-    });
-  </script>
+    // Go to the login page for now
+    window.location.href = "login.html";
+  });
+</script>
 
 </body>
 </html>
